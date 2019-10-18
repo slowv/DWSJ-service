@@ -107,4 +107,40 @@ public class User {
     public void setStatus(int status) {
         this.status = status;
     }
+
+    public static final class Builder {
+        private String username;
+        private String password;
+        private String role;
+
+        private Builder() {
+        }
+
+        public static Builder anUser() {
+            return new Builder();
+        }
+
+        public Builder setUsername(String username) {
+            this.username = username;
+            return this;
+        }
+
+        public Builder setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+
+        public Builder setRole(String role) {
+            this.role = role;
+            return this;
+        }
+
+        public User build() {
+            User user = new User();
+            user.setUsername(username);
+            user.setPassword(password);
+            user.setRole(role);
+            return user;
+        }
+    }
 }
