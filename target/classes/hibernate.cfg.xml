@@ -4,10 +4,10 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/web-service?useSSL=false&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</property>
+        <property name="connection.url">jdbc:mysql://db4free.net:3306/marcozo?useSSL=false&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.username">root</property>
-        <property name="connection.password"></property>
+        <property name="connection.username">marco435</property>
+        <property name="connection.password">123456789</property>
         <property name="connection.autocommit">true</property>
 
         <!-- DB schema will be updated if needed -->
@@ -15,10 +15,10 @@
 
         <!-- Mapping -->
         <property name="hibernate.show_sql">true</property>
-        <mapping class="t1708e.travel.entity.User"/>
-        <mapping class="t1708e.travel.entity.Comment"/>
-        <mapping class="t1708e.travel.entity.Image"/>
-        <mapping class="t1708e.travel.entity.Place"/>
-        <mapping class="t1708e.travel.entity.Rating"/>
+        <mapping class="t1708e.assignment.dwsj.entity.User"/>
+        <mapping class="t1708e.assignment.dwsj.entity.Comment"/>
+        <mapping class="t1708e.assignment.dwsj.entity.Image"/>
+        <mapping class="t1708e.assignment.dwsj.entity.Place"/>
+        <mapping class="t1708e.assignment.dwsj.entity.Rating"/>
     </session-factory>
 </hibernate-configuration>
