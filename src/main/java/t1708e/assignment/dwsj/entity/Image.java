@@ -13,8 +13,8 @@ public class Image {
     private long id;
     private String name;
     private String source;
-    @ManyToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "placeId")
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "placeId")
     private Place place;
     @OneToMany(mappedBy = "image", cascade = CascadeType.ALL)
     private Set<Rating> ratings;
@@ -31,4 +31,6 @@ public class Image {
         this.updatedAt = now;
         this.status = 1;
     }
+
+
 }
