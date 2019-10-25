@@ -23,14 +23,6 @@ public class UserService {
         System.out.println(user.getUsername());
         return user;
     }
-
-    @WebMethod
-    public User login(User user) {
-        User userResult = findByUsername(user.getUsername());
-        System.out.println(userResult.getUsername());
-        return userResult;
-    }
-
     @WebMethod
     public User updateUser(User user) {
         return user;

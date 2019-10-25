@@ -12,13 +12,13 @@ public class Rating {
     private long id;
     private double point;
     @ManyToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "userId")
+    @JoinColumn(name = "userId")
     private User user;
     @ManyToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "placeId")
+    @JoinColumn(name = "placeId")
     private Place place;
     @ManyToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "imageId")
+    @JoinColumn(name = "imageId")
     private Image image;
     private long createdAt;
     private long updatedAt;
